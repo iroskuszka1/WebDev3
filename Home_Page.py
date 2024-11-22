@@ -15,7 +15,7 @@ st.subheader("Ian Roskuszka, Michael Kolby")
 # TODO: Write a quick description for all of your pages in this lab below, in the form:
 #       1. **Dwight's Portfolio**: A brief summary of the education and work experience of Dwight K. Schrute.
 #       2. **Michael's Portfolio**: A brief summary of the education and work experience of Michael G. Scott.
-#       3. **Page Name**: Description
+#       3. **Fortnite Character Select**: Choose your Fortnite skin before playing a solo competitive match.
 #       4. **Page Name**: Description
 
 st.write("""
@@ -23,7 +23,7 @@ Welcome to our Streamlit Web Development Lab03 app! You can navigate between the
 
 1. Dwight's Portfolio
 2. Michael's Portfolio
-3. API
+3. Fortnite Character Select
 4. GPT
 
 """)
