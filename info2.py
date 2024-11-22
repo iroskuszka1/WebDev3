@@ -1,7 +1,7 @@
 import requests
 import random
 
-dropboximage = "APIImages/OIP.jpg"
+dropboximage = "APIImages/fortnitecover.jpg"
 
 finalList = []
 skinsDict = {}
