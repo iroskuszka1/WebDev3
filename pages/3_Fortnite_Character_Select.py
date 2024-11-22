@@ -15,7 +15,7 @@ def skinSelect():
     st.markdown(
         """
         <div style="text-align: center;">
-            <h1 style="margin-bottom: 20px;">Fortnite Loadout Generator</h1>
+            <h1 style="margin-bottom: 20px;">Fortnite Character Select</h1>
         </div>
         """,
         unsafe_allow_html=True
