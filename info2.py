@@ -34,6 +34,8 @@ def fortniteSkins():
             imagesKey = skins["images"]
             if "icon" in imagesKey:
                 skinImage = imagesKey["icon"]
+            elif "smallIcon" in imagesKey:
+                skinImage = imagesKey["smallIcon"]
         for chosenSkins in finalList:
             if chosenSkins == name:
                 skinsDict[name] = [rarityValue, chapter, skinImage]
