@@ -39,9 +39,7 @@ def skinSelect():
     
     if st.button("Generate loadout!"):
         for skinItems in info2.skinsDict:
-            rarity, chapter, image = info2.skinsDict[selectedSkin]
-            if selectedSkin != skinItems:
-                return "Please select a character from the dropdown menu above."
+            rarity, chapter, image = info2.skinsDict[skinItems]
             if selectedSkin == skinItems:
                 st.markdown(
                 f"""
