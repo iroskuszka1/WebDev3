@@ -6,7 +6,7 @@ import random
 def initialize_skins():
     if "finalList" not in st.session_state:
         info2.fortniteSkins()
-        st.session_state.finalList = random.sample(info2.finalList, 11)
+        st.session_state.finalList = random.sample(info2.finalList, 10)
         st.session_state.skinsDict = info2.skinsDict  
 
 def skinSelect():
