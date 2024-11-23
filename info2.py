@@ -19,7 +19,7 @@ def fortniteSkins():
         values = itemType["value"]
         if values.lower() == "outfit":
         	if name != "TBD" or name != "null":
-                    continue
+                continue
             else:
                 skinNameList.append(name)
 
