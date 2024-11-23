@@ -53,7 +53,7 @@ def skinSelect():
                 if chapter == "1":
                     st.write(f"Your skin is {selectedSkin}! They are a seasoned fighter from Chapter 1 who honed their skills during the early days of the iconic battle royale. Some of their favorite landmarks include POIs from the likes of Tilted Towers to Dusty Depot.")
                 if chapter == "2":
-                    st.write(f"Your skin is {selectedSkin}! This fighter is from Chapter 2, and has experienced the game's evolution. They learned to adapt to changes like the introduction of vehicles and new mechanics.")
+                    st.write(f"Your skin is {selectedSkin}! This fighter is from Chapter 2 and has experienced the game's evolution. They learned to adapt to changes like the introduction of vehicles and new mechanics.")
                 if chapter == "3":
                     st.write(f"Your skin is {selectedSkin}! They were introduced during Chapter 3, a pivotal time in Fortnite's history marked by the Unreal Engine 5 upgrade. This is when unique game changes like sliding and mantling changed the course of Fortnite as we know it. They were priveleged to explore iconic locations like the Daily Bugle and Sanctuary.")
                 if chapter == "4":
