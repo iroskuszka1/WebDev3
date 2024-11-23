@@ -2,6 +2,7 @@ import requests
 import random
 
 dropboximage = "APIImages/fortnitecover.jpg"
+mapImage = "APIImages/map_en.png"
 
 finalList = []
 skinsDict = {}
