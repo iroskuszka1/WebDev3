@@ -8,10 +8,8 @@ def initialize_skins():
         info2.fortniteSkins()
         st.session_state.finalList = random.sample(info2.finalList, 10)
         st.session_state.skinsDict = info2.skinsDict  
-rarity = rarity
 def skinSelect():
     initialize_skins()
-    global rarity
     st.markdown(
         """
         <div style="text-align: center;">
