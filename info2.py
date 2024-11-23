@@ -19,7 +19,9 @@ def fortniteSkins():
         values = itemType["value"]
         if values.lower() == "outfit":
         	if name != "TBD" or name != "null":
-                    skinNameList.append(name)
+                    continue
+            else:
+                skinNameList.append(name)
 
     randomNumber = random.randrange(0,200)
     for i in range(randomNumber,2000,200):
