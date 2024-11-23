@@ -38,6 +38,4 @@ def fortniteSkins():
             if chosenSkins == name:
                 skinsDict[name] = [rarityValue, chapter, skinImage]
 
-
-    print(finalList)
 print(fortniteSkins())
