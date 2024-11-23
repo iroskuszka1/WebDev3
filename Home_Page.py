@@ -16,7 +16,7 @@ st.subheader("Ian Roskuszka, Michael Kolby")
 #       1. **Dwight's Portfolio**: A brief summary of the education and work experience of Dwight K. Schrute.
 #       2. **Michael's Portfolio**: A brief summary of the education and work experience of Michael G. Scott.
 #       3. **Fortnite Character Select**: Choose your Fortnite skin before playing a solo competitive match.
-#       4. **Page Name**: Description
+#       4. **Fortnite Solo Simulator**: Choose a banner to fight under and a location to land at. See how the character you previously selected fairs in a game of Fortnite.
 
 st.write("""
 Welcome to our Streamlit Web Development Lab03 app! You can navigate between the pages using the sidebar to the left. The following pages are:
@@ -24,7 +24,7 @@ Welcome to our Streamlit Web Development Lab03 app! You can navigate between the
 1. Dwight's Portfolio
 2. Michael's Portfolio
 3. Fortnite Character Select
-4. GPT
+4. Fortnite Solo Simulator
 
 """)
 
