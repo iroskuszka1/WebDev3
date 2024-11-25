@@ -30,6 +30,12 @@ def initialize_items():
         st.session_state.selectedRarity = None
 initialize_items()
 
+if "deploy_glider" not in st.session_state:
+    st.deploy_glider = False
+
+if "llmgenerate" not in st.session_state:
+    st.llmgenerate = False
+
 #Title Area
 def titleFunc():
     st.title("Fortnite Battle Royale Simulator")
@@ -73,6 +79,7 @@ rarityList = ["Uncommon", "Rare", "Epic", "Legendary"]
 
 rarityList = ["Uncommon", "Rare", "Epic", "Legendary"]
 if st.button("Deploy your Glider!"):
+    st.deploy_glider = True
     locationIndex = st.session_state.finalLocationList.index(st.session_state.selectedLocation)
     selectedBanner = st.session_state.selectedBanner
     selectedLocation = st.session_state.selectedLocation
@@ -102,9 +109,11 @@ if st.button("Deploy your Glider!"):
     st.title("Ask a question!")
     st.subheader("If you want to know more about the match, or just about Fortnite in general, type a question.")
     responsePrompt = st.text_input("Type here:")
-    if st.button("Enter"):
-        if responsePrompt.strip():
-            finalResponse = model.generate_content(responsePrompt)
-    st.write(finalResponse)
-    st.write("---")
+    if st.deploy_glider:
+        if st.button("Enter"):
+            st.llmgenerate = True
+            if responsePrompt.strip():
+                finalResponse = model.generate_content(responsePrompt)
+            st.write(finalResponse)
+            st.write("---")
 
