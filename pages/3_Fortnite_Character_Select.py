@@ -75,12 +75,13 @@ def skinSelect():
         if st.button("Ready Up"):
             st.session_state.ready_up_pressed = True
             st.markdown(
-                """
-                <audio autoplay>
-                    <source src="APIFiles/battleBusAudio.mp3" type="audio/mpeg">
-                </audio>
-                """,
-                unsafe_allow_html=True,
+            """
+            <script>
+                var audio = new Audio('APIFiles/battleBusAudio.mp3');
+                audio.play();
+            </script>
+            """,
+            unsafe_allow_html=True,
             )
             st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
             st.markdown(
