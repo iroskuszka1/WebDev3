@@ -74,7 +74,8 @@ def skinSelect():
     if st.session_state.generate_loadout_pressed: 
         if st.button("Ready Up"):
             st.session_state.ready_up_pressed = True
-            st.image("APIImages/battlebusimage.jpg", caption="", use_column_width=True)
+            st.audio("APIFiles/battleBusAudio.mp3", start_time=0)
+            st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
             st.markdown(
             """
                 <p style="font-size: 18px; line-height: 1.6; margin-top: 20px;">
