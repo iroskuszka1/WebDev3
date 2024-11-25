@@ -74,7 +74,7 @@ def skinSelect():
     if st.session_state.generate_loadout_pressed:
         if st.button("Ready Up"):
             st.session_state.ready_up_pressed = True
-            with open("APIFiles/battlebus_sound.mp3", "rb") as audio_file:
+            with open("APIFiles/battleBusAudio.mp3", "rb") as audio_file:
                 audio_base64 = base64.b64encode(audio_file.read()).decode()
             st.markdown(
             f"""
