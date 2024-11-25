@@ -110,19 +110,19 @@ if st.button("Deploy your Glider!"):
         ).text
     st.write(response)
     
-st.title("Ask a question!")
-st.subheader("If you want to know more about the match, or just about Fortnite in general, type a question.")
-if st.session_state.deploy_glider:
-    responsePrompt = st.text_input("Type here:")
-    if st.button("Enter"):
-        st.session_state.llmgenerate = True
-        if responsePrompt.strip():
-            st.session_state.finalRespons = model.generate_content(responsePrompt)
-        else:
-            st.session_state.finalResponse = "No question entered."
-        if st.session_state.llmgenerate:
-            st.write(st.session_state.finalResponse)
-if st.session_state.llmgenerate:
-    st.write(st.session_state.finalResponse)
-    st.write("---")
+    st.title("Ask a question!")
+    st.subheader("If you want to know more about the match, or just about Fortnite in general, type a question.")
+    if st.session_state.deploy_glider:
+        responsePrompt = st.text_input("Type here:")
+        if st.button("Enter"):
+            st.session_state.llmgenerate = True
+            if responsePrompt.strip():
+                st.session_state.finalRespons = model.generate_content(responsePrompt)
+            else:
+                st.session_state.finalResponse = "No question entered."
+            if st.session_state.llmgenerate:
+                st.write(st.session_state.finalResponse)
+    if st.session_state.llmgenerate:
+        st.write(st.session_state.finalResponse)
+        st.write("---")
 
