@@ -77,12 +77,12 @@ def skinSelect():
             st.markdown(
                 """
                 <audio autoplay>
-                    <source src="APIFiles/battlebus_sound.mp3" type="audio/mpeg">
+                    <source src="APIFiles/battleBusAudio.mp3" type="audio/mpeg">
                 </audio>
                 """,
                 unsafe_allow_html=True,
             )
-            st.image("APIFiles/battlebusimage.mp3", caption="", use_column_width=True)
+            st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
             st.markdown(
                 """
                 <p style="font-size: 18px; line-height: 1.6; margin-top: 20px; text-align: center;">
