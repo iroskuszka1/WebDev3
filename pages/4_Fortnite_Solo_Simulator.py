@@ -28,19 +28,21 @@ def initialize_items():
 
     if "selectedRarity" not in st.session_state:
         st.session_state.selectedRarity = None
+
+    
+    if "deploy_glider" not in st.session_state:
+        st.session_state.deploy_glider = False
+    
+    if "llmgenerate" not in st.session_state:
+        st.session_state.llmgenerate = False
+    
+    if "finalResponse" not in st.session_state:
+        st.session_state.finalResponse = None
+    
+    if "responsePrompt" not in st.session_state:
+        st.session_state.responsePrompt = ""
 initialize_items()
 
-if "deploy_glider" not in st.session_state:
-    st.session_state.deploy_glider = False
-
-if "llmgenerate" not in st.session_state:
-    st.session_state.llmgenerate = False
-
-if "finalResponse" not in st.session_state:
-    st.session_state.finalResponse = None
-
-if "responsePrompt" not in st.session_state:
-    st.session_state.responsePrompt = ""
 
 #Title Area
 def titleFunc():
@@ -112,19 +114,16 @@ if st.button("Deploy your Glider!"):
             f"Write a short description of a Fortnite character's events as they place within the top 40 players not within the top 15 in a game of solo battle royale. The character’s skin is {selectedSkin}. They landed at {selectedLocation}. Write a short paragraph for each storm circle, describing the ways in which the character got eliminations or the loot they found in chests and supply drops."
         ).text
     st.write(response)
-    
-    st.title("Ask a question!")
-    st.subheader("If you want to know more about the match, or just about Fortnite in general, type a question.")
+
     if st.session_state.deploy_glider:
-        st.session_state.responsePrompt = st.text_input("Type here:")
+        st.title("Ask a question!")
+        st.subheader("If you want to know more about the match, or just about Fortnite in general, type a question.")
+        st.session_state.responsePrompt = st.text_input("Type here:", value=st.session_state.responsePrompt)
         if st.button("Enter"):
             if st.session_state.responsePrompt.strip():
                 st.session_state.llmgenerate = True
-                st.session_state.finalResponse = model.generate_content(responsePrompt)
+                st.session_state.finalResponse = model.generate_content(responsePrompt).text
+                st.write(st.session_state.finalResponse)
             else:
                 st.session_state.finalResponse = "No question entered."
-
-    if st.session_state.llmgenerate:
-        st.write(st.session_state.finalResponse)
-        st.write("---")
 
