@@ -74,9 +74,17 @@ def skinSelect():
     if st.session_state.generate_loadout_pressed:
         if st.button("Ready Up"):
             st.session_state.ready_up_pressed = True
-            audio_file = open("APIFiles/battleBusAudio.mp3", "rb")
-            audio_bytes = audio_file.read()
-            st.audio(audio_bytes, format="audio/mp3", start_time=0)
+            with open("APIFiles/battlebus_sound.mp3", "rb") as audio_file:
+                audio_base64 = base64.b64encode(audio_file.read()).decode()
+            st.markdown(
+            f"""
+            <audio autoplay>
+                <source src="data:audio/mpeg;base64,{audio_base64}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            """,
+            unsafe_allow_html=True,
+            )
             st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
             st.markdown(
                 """
