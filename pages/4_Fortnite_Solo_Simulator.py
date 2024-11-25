@@ -105,6 +105,6 @@ if st.button("Deploy your Glider!"):
     if st.button("Enter"):
         if responsePrompt.strip():
             LLMResponse = model.generate_content(responsePrompt)
-    st.write(f"{LLMResponse}")
+    st.write(LLMResponse)
     st.write("---")
 
