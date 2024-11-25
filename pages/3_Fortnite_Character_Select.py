@@ -80,11 +80,10 @@ def skinSelect():
                 f"""
                 <audio id="battlebus-audio" autoplay>
                     <source src="data:audio/mpeg;base64,{audio_base64}" type="audio/mpeg">
-                    Your browser does not support the audio element.
                 </audio>
                 <script>
                     const audioElement = document.getElementById('battlebus-audio');
-                    audioElement.currentTime = 1;  // Start audio at 1 second
+                    audioElement.currentTime = 2;
                 </script>
                 """,
                 unsafe_allow_html=True,
