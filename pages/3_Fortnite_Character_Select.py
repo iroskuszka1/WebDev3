@@ -1,7 +1,6 @@
 import base64
 import streamlit as st
 import info2
-import pandas as pd
 import random
 
 def initialize_skins():
