@@ -77,7 +77,7 @@ def skinSelect():
             st.markdown(
             """
             <audio autoplay>
-                <source src="./APIImages/battlebus_sound.mp3" type="audio/mpeg">
+                <source src="APIFiles/battlebus_sound.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
             """,
