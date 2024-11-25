@@ -88,7 +88,7 @@ def skinSelect():
                 """,
                 unsafe_allow_html=True,
             )
-            st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
+            st.image("APIFiles/battlebusimage.jpg", caption="", use_container_width=True)
             st.markdown(
                 """
                 <p style="font-size: 18px; line-height: 1.6; margin-top: 20px; text-align: center;">
