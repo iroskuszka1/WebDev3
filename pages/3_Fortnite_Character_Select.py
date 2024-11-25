@@ -78,17 +78,17 @@ def skinSelect():
             with open("APIFiles/battleBusAudio.mp3", "rb") as audio_file:
                 audio_base64 = base64.b64encode(audio_file.read()).decode()
             st.markdown(
-            f"""
-            <audio autoplay>
-                <source src="data:audio/mpeg;base64,{audio_base64}" type="audio/mpeg">
-            </audio>
-            <script>
+                f"""
+                <audio id="battlebus-audio" autoplay>
+                    <source src="data:audio/mpeg;base64,{audio_base64}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <script>
                     const audioElement = document.getElementById('battlebus-audio');
                     audioElement.currentTime = 1;  // Start audio at 1 second
                 </script>
                 """,
-            """,
-            unsafe_allow_html=True,
+                unsafe_allow_html=True,
             )
             st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
             st.markdown(
