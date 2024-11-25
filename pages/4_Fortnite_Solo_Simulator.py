@@ -122,7 +122,7 @@ if st.button("Deploy your Glider!"):
         if st.button("Enter"):
             if st.session_state.responsePrompt.strip():
                 st.session_state.llmgenerate = True
-                st.session_state.finalResponse = model.generate_content(responsePrompt).text
+                st.session_state.finalResponse = model.generate_content(st.session_state.finalResponse.responsePrompt).text
                 st.write(st.session_state.finalResponse)
             else:
                 st.session_state.finalResponse = "No question entered."
