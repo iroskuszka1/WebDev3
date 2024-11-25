@@ -36,6 +36,9 @@ if "deploy_glider" not in st.session_state:
 if "llmgenerate" not in st.session_state:
     st.session_state.llmgenerate = False
 
+if "finalResponse" not in st.session_state:
+    st.session_state.finalResponse = None
+
 #Title Area
 def titleFunc():
     st.title("Fortnite Battle Royale Simulator")
