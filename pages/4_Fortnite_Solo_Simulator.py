@@ -100,7 +100,7 @@ if st.button("Deploy your Glider!"):
         ).text
     st.write(response)
     st.title("Ask a question!")
-    st.subheader("If you want to know more about the match, or just about Fortnite in general, type a question.
+    st.subheader("If you want to know more about the match, or just about Fortnite in general, type a question.")
     responsePrompt = st.text_input("Type here:")
     if st.button("Enter"):
         if responsePrompt.strip():
