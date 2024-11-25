@@ -106,14 +106,18 @@ if st.button("Deploy your Glider!"):
             f"Write a short description of a Fortnite character's events as they place within the top 40 players not within the top 15 in a game of solo battle royale. The character’s skin is {selectedSkin}. They landed at {selectedLocation}. Write a short paragraph for each storm circle, describing the ways in which the character got eliminations or the loot they found in chests and supply drops."
         ).text
     st.write(response)
+    
     st.title("Ask a question!")
     st.subheader("If you want to know more about the match, or just about Fortnite in general, type a question.")
-    responsePrompt = st.text_input("Type here:")
     if st.session_state.deploy_glider:
+        responsePrompt = st.text_input("Type here:")
         if st.button("Enter"):
             st.session_state.llmgenerate = True
             if responsePrompt.strip():
                 finalResponse = model.generate_content(responsePrompt)
-            st.write(finalResponse)
+            if st.session_state.llmgenerate:
+                st.write(st.session_state.finalResponse)
             st.write("---")
+    if st.session_state.llmgenerate:
+        st.write(st.session_state.finalResponse)
 
