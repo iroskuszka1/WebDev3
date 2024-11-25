@@ -1,8 +1,6 @@
 import google.generativeai as genai
-import os
 import info2
 import streamlit as st
-import pandas as pd
 import random
 
 
