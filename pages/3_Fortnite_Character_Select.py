@@ -71,10 +71,10 @@ def skinSelect():
                 st.write(f"Your skin is {st.session_state.selectedSkin}! Your skin stands at the cutting edge of Fortnite. They were introduced in Chapter 5, where they competed on a map unlike any other.")
             st.write("---")
             st.write("Now that you have selected your Fortnite character, it's time to ready up for a solo match. However, you must be careful! Your landing spot directly affects your probabilty of achieving the coveted #1 Victory Royale. Good luck... and don't forget to thank the bus driver!")
-    if st.session_state.generate_loadout_pressed: 
-        if st.button("Ready Up"):
-            st.session_state.ready_up_pressed = True
-            st.markdown(
+    if st.session_state.generate_loadout_pressed:
+    if st.button("Ready Up"):
+        st.session_state.ready_up_pressed = True
+        st.markdown(
             """
             <audio autoplay>
                 <source src="APIFiles/battlebus_sound.mp3" type="audio/mpeg">
@@ -82,15 +82,14 @@ def skinSelect():
             </audio>
             """,
             unsafe_allow_html=True,
-            )
-            st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
-            st.markdown(
+        )
+        st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
+        st.markdown(
             """
-                <p style="font-size: 18px; line-height: 1.6; margin-top: 20px;">
-                    Please go to the Fortnite Simulator page to see how you fare in a solo match of Fortnite Battle Royale.
-                </p>
-            </div>
+            <p style="font-size: 18px; line-height: 1.6; margin-top: 20px; text-align: center;">
+                Please go to the Fortnite Simulator page to see how you fare in a solo match of Fortnite Battle Royale.
+            </p>
             """,
             unsafe_allow_html=True,
-            )
+        )
 skinSelect()
