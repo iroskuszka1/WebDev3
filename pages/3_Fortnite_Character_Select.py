@@ -81,6 +81,8 @@ def skinSelect():
                 Your browser does not support the audio element.
             </audio>
             """,
+            unsafe_allow_html=True,
+            )
             st.image("APIFiles/battlebusimage.jpg", caption="", use_column_width=True)
             st.markdown(
             """
