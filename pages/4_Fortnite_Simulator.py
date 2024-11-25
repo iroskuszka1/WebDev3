@@ -75,7 +75,7 @@ rarityList = ["Uncommon", "Rare", "Epic", "Legendary"]
 
 rarityList = ["Uncommon", "Rare", "Epic", "Legendary"]
 if st.button("Deploy your Glider!"):
-    locationIndex = info2.finalLocationList.index(st.session_state.selectedLocation)
+    locationIndex = st.session_state.finalLocationList.index(st.session_state.selectedLocation)
     selectedBanner = st.session_state.selectedBanner
     selectedLocation = st.session_state.selectedLocation
     selectedRarity = st.session_state.selectedRarity   
