@@ -98,6 +98,6 @@ if st.button("Deploy your Glider!"):
         ).text
     else:
         response = model.generate_content(
-            f"Write a short description of a Fortnite character's events as they place within the top 40 players but worse than the top 15 players in a game of solo battle royale. The character’s skin is {selectedSkin}. They landed at {selectedLocation}. Write a short paragraph for each storm circle, describing the ways in which the character got eliminations or the loot they found in chests and supply drops."
+            f"Write a short description of a Fortnite character's events as they place within the top 40 players not within the top 15 in a game of solo battle royale. The character’s skin is {selectedSkin}. They landed at {selectedLocation}. Write a short paragraph for each storm circle, describing the ways in which the character got eliminations or the loot they found in chests and supply drops."
         ).text
     st.write(response)
